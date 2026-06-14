@@ -97,6 +97,44 @@ nav {
   background: var(--accent-glow);
   transform: translateY(-1px);
 }
+
+/* Floating language switcher */
+.lang-toggle {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 200;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--white);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(0, 87, 255, 0.08);
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+}
+.lang-toggle:hover {
+  border-color: var(--accent);
+  background: var(--bg-card2);
+  transform: translateY(-2px);
+}
+html[dir="rtl"] .lang-toggle {
+  right: auto;
+  left: 1.75rem;
+}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -155,7 +193,7 @@ section {
 
 .section-label {
   font-family: var(--font-display);
-  font-size: 0.72rem;
+  font-size: 0.96rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -472,6 +510,8 @@ h1.hero-title .thin-word {
   overflow: hidden;
   margin-bottom: 1.5rem;
   padding: 0.25rem 0;
+  cursor: grab;
+  user-select: none;
 }
 .slider-wrapper::before,
 .slider-wrapper::after {
@@ -608,6 +648,8 @@ h1.hero-title .thin-word {
   position: relative;
   overflow: hidden;
   padding: 0.25rem 0;
+  cursor: grab;
+  user-select: none;
 }
 .clients-slider-wrapper::before,
 .clients-slider-wrapper::after {
@@ -672,7 +714,8 @@ h1.hero-title .thin-word {
   transform: translateY(-3px);
 }
 .client-logo {
-  max-width: 132px;
+  /* width: 52px;
+  height: 52px; */
   border-radius: var(--radius-sm);
   object-fit: contain;
   filter: brightness(0) invert(1);
@@ -1007,6 +1050,16 @@ footer {
   section {
     padding: 4rem 5vw;
   }
+  .lang-toggle {
+    width: 46px;
+    height: 46px;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.7rem;
+  }
+  html[dir="rtl"] .lang-toggle {
+    left: 1.25rem;
+  }
 }
 @media (max-width: 540px) {
   .hero-stats {
@@ -1040,10 +1093,106 @@ footer {
   }
 }
 
-.slider-wrapper, .clients-slider-wrapper {
-  position: relative;
-  overflow: hidden;
-  padding: 0.25rem 0;
-  cursor: grab;
-  user-select: none;
+/* ── RTL (ARABIC) SUPPORT ── */
+html[dir="rtl"] body,
+html[dir="rtl"] .nav-logo,
+html[dir="rtl"] .nav-links a,
+html[dir="rtl"] .nav-cta,
+html[dir="rtl"] .lang-toggle,
+html[dir="rtl"] .hero-badge,
+html[dir="rtl"] h1.hero-title,
+html[dir="rtl"] .hero-body,
+html[dir="rtl"] .btn-primary,
+html[dir="rtl"] .btn-ghost,
+html[dir="rtl"] .hero-stat-num,
+html[dir="rtl"] .hero-stat-label,
+html[dir="rtl"] .section-label,
+html[dir="rtl"] h2.section-title,
+html[dir="rtl"] .section-subtitle,
+html[dir="rtl"] .service-name,
+html[dir="rtl"] .service-desc,
+html[dir="rtl"] .partner-tier-label,
+html[dir="rtl"] .partner-pill,
+html[dir="rtl"] .partner-logo-card span,
+html[dir="rtl"] .client-name,
+html[dir="rtl"] .clients-quote blockquote,
+html[dir="rtl"] .clients-quote cite,
+html[dir="rtl"] .vision-block p,
+html[dir="rtl"] .value-num,
+html[dir="rtl"] .value-name,
+html[dir="rtl"] .value-desc,
+html[dir="rtl"] label,
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select,
+html[dir="rtl"] .form-submit,
+html[dir="rtl"] .channel-label,
+html[dir="rtl"] .channel-value,
+html[dir="rtl"] .footer-logo,
+html[dir="rtl"] .footer-links a,
+html[dir="rtl"] .footer-copy,
+html[dir="rtl"] .mobile-menu a {
+  font-family: "Tajawal", sans-serif;
+}
+html[dir="rtl"] .nav-links,
+html[dir="rtl"] .footer-links,
+html[dir="rtl"] .hero-actions,
+html[dir="rtl"] .partners-scroll,
+html[dir="rtl"] .contact-channels,
+html[dir="rtl"] .mobile-menu ul {
+  direction: rtl;
+}
+html[dir="rtl"] .section-label {
+  flex-direction: row;
+}
+html[dir="rtl"] .clients-quote,
+html[dir="rtl"] .value-item,
+html[dir="rtl"] .vision-block {
+  border-left: none;
+}
+html[dir="rtl"] .clients-quote {
+  border-right: 3px solid var(--accent);
+  padding-right: 1.4rem;
+  padding-left: 0;
+}
+html[dir="rtl"] .value-item {
+  grid-template-columns: 1fr 2rem;
+}
+html[dir="rtl"] .value-num {
+  order: 2;
+  text-align: left;
+}
+html[dir="rtl"] .btn-ghost {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .section-subtitle,
+html[dir="rtl"] .hero-body,
+html[dir="rtl"] .value-name,
+html[dir="rtl"] .value-desc,
+html[dir="rtl"] .service-name,
+html[dir="rtl"] .service-desc,
+html[dir="rtl"] .clients-quote blockquote,
+html[dir="rtl"] .vision-block p {
+  text-align: right;
+}
+html[dir="rtl"] .section-subtitle {
+  margin-left: auto;
+}
+@media (max-width: 880px) {
+  html[dir="rtl"] .section-subtitle {
+    margin-left: 0;
+  }
+}
+
+/* Keep sliders in LTR so JS-driven translateX math is unaffected by page direction */
+.slider-wrapper,
+.slider-track,
+.clients-slider-wrapper,
+.clients-track {
+  direction: ltr;
+}
+html[dir="rtl"] .channel-value{
+  direction: ltr;
 }

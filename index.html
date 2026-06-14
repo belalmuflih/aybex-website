@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AYBEX Digital Solutions</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css">
 <script>
   // ── JS-driven sliders: auto-scroll + drag/swipe ──
@@ -85,28 +85,30 @@
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <img src="./images/logo-light.png" alt="AYBEX Digital Solutions" />
-  </a>  
+    <img src="/images/logo-light.png" alt="AYBEX Digital Solutions" />
+  </a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#partnerships">Partners</a></li>
-    <li><a href="#clients">Clients</a></li>
-    <li><a href="#values">Values</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+    <li><a href="#partnerships" data-i18n="nav.partners">Partners</a></li>
+    <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
+    <li><a href="#values" data-i18n="nav.values">Values</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get in Touch</a>
+  <a href="#contact" class="nav-cta" data-i18n="nav.getInTouch">Get in Touch</a>
   <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </button>
 </nav>
+<!-- Floating language switcher -->
+<button class="lang-toggle" onclick="toggleLang()" id="langToggle" aria-label="Switch language">AR</button>
 
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-    <li><a href="#partnerships" onclick="toggleMenu()">Partners</a></li>
-    <li><a href="#clients" onclick="toggleMenu()">Clients</a></li>
-    <li><a href="#values" onclick="toggleMenu()">Values</a></li>
-    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    <li><a href="#services" onclick="toggleMenu()" data-i18n="nav.services">Services</a></li>
+    <li><a href="#partnerships" onclick="toggleMenu()" data-i18n="nav.partners">Partners</a></li>
+    <li><a href="#clients" onclick="toggleMenu()" data-i18n="nav.clients">Clients</a></li>
+    <li><a href="#values" onclick="toggleMenu()" data-i18n="nav.values">Values</a></li>
+    <li><a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Contact</a></li>
   </ul>
 </div>
 
@@ -133,35 +135,35 @@
   <div class="hero-glow2"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-badge">IT Solutions &amp; Technology Partner · Saudi Arabia</div>
-      <h1 class="hero-title">
+      <div class="hero-badge" data-i18n="hero.badge">IT Solutions &amp; Technology Partner · Saudi Arabia</div>
+      <h1 class="hero-title" data-i18n-html="hero.title">
         Powering<br>
         <span class="accent-word">Digital</span><br>
         <span class="thin-word">Infrastructure</span>
       </h1>
-      <p class="hero-body">AYBEX Digital Solutions delivers enterprise-grade IT, cloud, and vendor reseller services that give businesses in the region a decisive technological edge.</p>
+      <p class="hero-body" data-i18n="hero.body">AYBEX Digital Solutions delivers enterprise-grade IT, cloud, and vendor reseller services that give businesses in the region a decisive technological edge.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Start a Project</a>
-        <a href="#services" class="btn-ghost">Explore Services →</a>
+        <a href="#contact" class="btn-primary" data-i18n="hero.ctaPrimary">Start a Project</a>
+        <a href="#services" class="btn-ghost" data-i18n="hero.ctaGhost">Explore Services →</a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-stats">
         <div class="hero-stat">
-          <div class="hero-stat-num">200<span class="unit">+</span></div>
-          <div class="hero-stat-label">Enterprise Clients Served</div>
+          <div class="hero-stat-num">100<span class="unit">%</span></div>
+          <div class="hero-stat-label" data-i18n="hero.stat1">Commitment to Quality and Transparency</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">15<span class="unit">+</span></div>
-          <div class="hero-stat-label">Global Technology Partners</div>
+          <div class="hero-stat-num">8<span class="unit">+</span></div>
+          <div class="hero-stat-label" data-i18n="hero.stat2">Global Technology Partners</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">8<span class="unit">yr</span></div>
-          <div class="hero-stat-label">Regional Industry Experience</div>
+          <div class="hero-stat-num">9<span class="unit" data-i18n="years">yr</span></div>
+          <div class="hero-stat-label" data-i18n="hero.stat3">Regional Industry Experience</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">99<span class="unit">%</span></div>
-          <div class="hero-stat-label">Client Satisfaction Rate</div>
+          <div class="hero-stat-label" data-i18n="hero.stat4">Client Satisfaction Rate</div>
         </div>
       </div>
     </div>
@@ -173,53 +175,53 @@
   <div class="container">
     <div class="services-header fade-up">
       <div>
-        <div class="section-label">What We Do</div>
-        <h2 class="section-title">End-to-end technology services</h2>
+        <div class="section-label" data-i18n="services.label">What We Do</div>
+        <h2 class="section-title" data-i18n="services.title">End-to-end technology services</h2>
       </div>
-      <p class="section-subtitle">From infrastructure consulting to enterprise software procurement, we handle the full technology lifecycle so your team can focus on what matters.</p>
+      <p class="section-subtitle" data-i18n="services.subtitle">From infrastructure consulting to enterprise software procurement, we handle the full technology lifecycle so your team can focus on what matters.</p>
     </div>
     <div class="services-grid">
       <div class="service-card fade-up">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-        <div class="service-name">IT Infrastructure</div>
-        <p class="service-desc">Design, deploy, and maintain resilient on-premise and hybrid infrastructure tailored to enterprise scale and regional compliance requirements.</p>
+        <div class="service-name" data-i18n="services.s1.name">IT Infrastructure</div>
+        <p class="service-desc" data-i18n="services.s1.desc">Design, deploy, and maintain resilient on-premise and hybrid infrastructure tailored to enterprise scale and regional compliance requirements.</p>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 0 0 1.5-9.77A5 5 0 0 0 9.1 6.1 3.5 3.5 0 0 0 3 9.5v.1A4 4 0 0 0 3 15z"/></svg>
         </div>
-        <div class="service-name">Cloud Solutions</div>
-        <p class="service-desc">Seamless migration, optimization, and management across AWS, Azure, and Google Cloud — built for performance and cost efficiency in the Gulf.</p>
+        <div class="service-name" data-i18n="services.s2.name">Cloud Solutions</div>
+        <p class="service-desc" data-i18n="services.s2.desc">Seamless migration, optimization, and management across AWS, Azure, and Google Cloud — built for performance and cost efficiency in the Gulf.</p>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <div class="service-name">Cybersecurity</div>
-        <p class="service-desc">Comprehensive threat assessment, endpoint protection, and compliance-driven security frameworks to safeguard your most critical assets.</p>
+        <div class="service-name" data-i18n="services.s3.name">Cybersecurity</div>
+        <p class="service-desc" data-i18n="services.s3.desc">Comprehensive threat assessment, endpoint protection, and compliance-driven security frameworks to safeguard your most critical assets.</p>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M12 12v4M8 17h8"/></svg>
         </div>
-        <div class="service-name">Vendor Reseller</div>
-        <p class="service-desc">Authorized reseller of leading global technology brands — hardware, software, and licensing — with dedicated procurement support and competitive pricing.</p>
+        <div class="service-name" data-i18n="services.s4.name">Vendor Reseller</div>
+        <p class="service-desc" data-i18n="services.s4.desc">Authorized reseller of leading global technology brands — hardware, software, and licensing — with dedicated procurement support and competitive pricing.</p>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
-        <div class="service-name">Managed Services</div>
-        <p class="service-desc">Proactive 24/7 monitoring, helpdesk, and system management — so operational downtime never becomes a business problem.</p>
+        <div class="service-name" data-i18n="services.s5.name">Managed Services</div>
+        <p class="service-desc" data-i18n="services.s5.desc">Proactive 24/7 monitoring, helpdesk, and system management — so operational downtime never becomes a business problem.</p>
       </div>
       <div class="service-card fade-up">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         </div>
-        <div class="service-name">IT Consulting</div>
-        <p class="service-desc">Strategic advisory from certified architects who align your technology investments with Vision 2030 objectives and long-term growth roadmaps.</p>
+        <div class="service-name" data-i18n="services.s6.name">IT Consulting</div>
+        <p class="service-desc" data-i18n="services.s6.desc">Strategic advisory from certified architects who align your technology investments with Vision 2030 objectives and long-term growth roadmaps.</p>
       </div>
     </div>
   </div>
@@ -229,9 +231,9 @@
 <section id="partnerships">
   <div class="container">
     <div class="partners-header fade-up">
-      <div class="section-label">Technology Partners</div>
-      <h2 class="section-title">Built on trusted global alliances</h2>
-      <p class="section-subtitle" style="margin-top:0.75rem;">We are an authorized partner of the world's leading technology vendors, giving our clients direct access to cutting-edge solutions backed by official support.</p>
+      <div class="section-label" data-i18n="partners.label">Technology Partners</div>
+      <h2 class="section-title" data-i18n="partners.title">Built on trusted global alliances</h2>
+      <p class="section-subtitle" style="margin-top:0.75rem;" data-i18n="partners.subtitle">We are an authorized partner of the world's leading technology vendors, giving our clients direct access to cutting-edge solutions backed by official support.</p>
     </div>
   </div>
 
@@ -241,59 +243,47 @@
       <!-- set 1 -->
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cisco.svg" alt="Cisco"><span>Cisco Systems</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg" alt="Microsoft"><span>Microsoft</span></div>
-      <!-- <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS"><span>Amazon Web Services</span></div> -->
-      <!-- <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="Google Cloud"><span>Google Cloud</span></div> -->
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/dell.svg" alt="Dell"><span>Dell Technologies</span></div>
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hpe.svg" alt="HPE"><span>HPE</span></div>
+      <div class="partner-logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Hewlett_Packard_Enterprise_logo_2025.svg/960px-Hewlett_Packard_Enterprise_logo_2025.svg.png?_=20250618191338" alt="HPE"><span>HPE</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fortinet.svg" alt="Fortinet"><span>Fortinet</span></div>
       <!-- set 2 -->
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cisco.svg" alt="Cisco"><span>Cisco Systems</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg" alt="Microsoft"><span>Microsoft</span></div>
-      <!-- <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS"><span>Amazon Web Services</span></div> -->
-      <!-- <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="Google Cloud"><span>Google Cloud</span></div> -->
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/dell.svg" alt="Dell"><span>Dell Technologies</span></div>
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hpe.svg" alt="HPE"><span>HPE</span></div>
+      <div class="partner-logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Hewlett_Packard_Enterprise_logo_2025.svg/960px-Hewlett_Packard_Enterprise_logo_2025.svg.png?_=20250618191338" alt="HPE"><span>HPE</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fortinet.svg" alt="Fortinet"><span>Fortinet</span></div>
       <!-- set 3 -->
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cisco.svg" alt="Cisco"><span>Cisco Systems</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoft.svg" alt="Microsoft"><span>Microsoft</span></div>
-      <!-- <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" alt="AWS"><span>Amazon Web Services</span></div> -->
-      <!-- <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="Google Cloud"><span>Google Cloud</span></div> -->
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/dell.svg" alt="Dell"><span>Dell Technologies</span></div>
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hpe.svg" alt="HPE"><span>HPE</span></div>
+      <div class="partner-logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Hewlett_Packard_Enterprise_logo_2025.svg/960px-Hewlett_Packard_Enterprise_logo_2025.svg.png?_=20250618191338" alt="HPE"><span>HPE</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fortinet.svg" alt="Fortinet"><span>Fortinet</span></div>
     </div>
   </div>
 
   <!-- Row 2: scrolls right -->
   <div class="slider-wrapper">
-    <div class="slider-track right">
-      <!-- set 1 -->
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vmware.svg" alt="VMware"><span>VMware</span></div>
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/veeam.svg" alt="Veeam"><span>Veeam</span></div>
+    <!-- <div class="slider-track right">
+      set 1
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/lenovo.svg" alt="Lenovo"><span>Lenovo</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hp.svg" alt="HP"><span>HP Inc.</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/acronis.svg" alt="Acronis"><span>Acronis</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paloaltonetworks.svg" alt="Palo Alto"><span>Palo Alto Networks</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cloudflare.svg" alt="Cloudflare"><span>Cloudflare</span></div>
-      <!-- set 2 -->
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vmware.svg" alt="VMware"><span>VMware</span></div>
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/veeam.svg" alt="Veeam"><span>Veeam</span></div>
+      set 2
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/lenovo.svg" alt="Lenovo"><span>Lenovo</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hp.svg" alt="HP"><span>HP Inc.</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/acronis.svg" alt="Acronis"><span>Acronis</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paloaltonetworks.svg" alt="Palo Alto"><span>Palo Alto Networks</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cloudflare.svg" alt="Cloudflare"><span>Cloudflare</span></div>
-      <!-- set 3 -->
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vmware.svg" alt="VMware"><span>VMware</span></div>
-      <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/veeam.svg" alt="Veeam"><span>Veeam</span></div>
+      set 3
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/lenovo.svg" alt="Lenovo"><span>Lenovo</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/hp.svg" alt="HP"><span>HP Inc.</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/acronis.svg" alt="Acronis"><span>Acronis</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/paloaltonetworks.svg" alt="Palo Alto"><span>Palo Alto Networks</span></div>
       <div class="partner-logo-card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cloudflare.svg" alt="Cloudflare"><span>Cloudflare</span></div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <!-- CLIENTS -->
@@ -301,22 +291,31 @@
   <div class="container">
     <div class="clients-intro">
       <div class="fade-up">
-        <div class="section-label">Our Clients</div>
-        <h2 class="section-title">Trusted by organizations across the Kingdom</h2>
-        <p class="section-subtitle">From government entities to high-growth enterprises, AYBEX Digital Solutions has earned the confidence of industry leaders across Saudi Arabia.</p>
+        <div class="section-label" data-i18n="clients.label">Our Clients</div>
+        <h2 class="section-title" data-i18n="clients.title">Trusted by organizations across the Kingdom</h2>
+        <p class="section-subtitle" data-i18n="clients.subtitle">From government entities to high-growth enterprises, AYBEX Digital Solutions has earned the confidence of industry leaders across Saudi Arabia and the wider Gulf region.</p>
       </div>
       <div class="clients-quote fade-up">
-        <blockquote>"AYBEX transformed our entire IT infrastructure in under six months. Their team understood our regulatory requirements and delivered a solution that exceeded expectations — on time and within budget."</blockquote>
-        <cite>— Head of IT Operations, Leading Saudi Bank</cite>
+        <blockquote data-i18n="clients.quote">"AYBEX transformed our entire IT infrastructure in under six months. Their team understood our regulatory requirements and delivered a solution that exceeded expectations — on time and within budget."</blockquote>
+        <cite data-i18n="clients.cite">— Head of IT Operations, Leading Saudi Healtcare</cite>
       </div>
     </div>
     <div class="clients-slider-wrapper fade-up">
       <div class="clients-track">
         <!-- set 1 -->
         <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
         <!-- set 2 -->
         <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
         <!-- set 3 -->
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
+        <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
         <div class="client-tile"><img class="client-logo" src="https://alsobh.com/wp-content/uploads/2025/07/Asset-2.svg" alt="Al Sobh Hospital" onerror="this.style.display='none'"><div class="client-name">Al Sobh Hospital</div></div>
       </div>
     </div>
@@ -328,48 +327,48 @@
   <div class="container">
     <div class="values-layout">
       <div class="values-sticky fade-up">
-        <div class="section-label">Values &amp; Vision</div>
-        <h2 class="section-title">Principles that guide every engagement</h2>
-        <p class="section-subtitle">We believe technology only creates value when it is delivered with integrity, depth of expertise, and a genuine commitment to the client's success.</p>
+        <div class="section-label" data-i18n="values.label">Values &amp; Vision</div>
+        <h2 class="section-title" data-i18n="values.title">Principles that guide every engagement</h2>
+        <p class="section-subtitle" data-i18n="values.subtitle">We believe technology only creates value when it is delivered with integrity, depth of expertise, and a genuine commitment to the client's success.</p>
         <div class="vision-block" style="margin-top:2rem;">
-          <div class="section-label" style="margin-bottom:0.5rem;">Our Vision</div>
-          <p>To be the <strong>most trusted digital infrastructure partner</strong> in the Arabian Gulf — enabling organizations to lead confidently in a technology-driven future aligned with <strong>Vision 2030</strong>.</p>
+          <div class="section-label" style="margin-bottom:0.5rem;" data-i18n="values.visionLabel">Our Vision</div>
+          <p data-i18n-html="values.visionText">To be the <strong>most trusted digital infrastructure partner</strong> in the Arabian Gulf — enabling organizations to lead confidently in a technology-driven future aligned with <strong>Vision 2030</strong>.</p>
         </div>
       </div>
       <div class="values-list fade-up">
         <div class="value-item">
           <div class="value-num">01</div>
           <div>
-            <div class="value-name">Client-First Mindset</div>
-            <p class="value-desc">Every decision starts with understanding what success looks like for the client. We measure our performance by the outcomes we deliver, not the products we sell.</p>
+            <div class="value-name" data-i18n="values.v1.name">Client-First Mindset</div>
+            <p class="value-desc" data-i18n="values.v1.desc">Every decision starts with understanding what success looks like for the client. We measure our performance by the outcomes we deliver, not the products we sell.</p>
           </div>
         </div>
         <div class="value-item">
           <div class="value-num">02</div>
           <div>
-            <div class="value-name">Technical Excellence</div>
-            <p class="value-desc">Our team holds certifications across the full vendor ecosystem. We invest continuously in upskilling so our clients always have access to the most current expertise.</p>
+            <div class="value-name" data-i18n="values.v2.name">Technical Excellence</div>
+            <p class="value-desc" data-i18n="values.v2.desc">Our team holds certifications across the full vendor ecosystem. We invest continuously in upskilling so our clients always have access to the most current expertise.</p>
           </div>
         </div>
         <div class="value-item">
           <div class="value-num">03</div>
           <div>
-            <div class="value-name">Integrity &amp; Transparency</div>
-            <p class="value-desc">We give honest recommendations, clear pricing, and direct communication — even when the honest answer is harder to deliver.</p>
+            <div class="value-name" data-i18n="values.v3.name">Integrity &amp; Transparency</div>
+            <p class="value-desc" data-i18n="values.v3.desc">We give honest recommendations, clear pricing, and direct communication — even when the honest answer is harder to deliver.</p>
           </div>
         </div>
         <div class="value-item">
           <div class="value-num">04</div>
           <div>
-            <div class="value-name">Agility &amp; Speed</div>
-            <p class="value-desc">In a rapidly evolving technology landscape, the ability to move decisively is a competitive advantage. We build processes that keep our clients ahead of change.</p>
+            <div class="value-name" data-i18n="values.v4.name">Agility &amp; Speed</div>
+            <p class="value-desc" data-i18n="values.v4.desc">In a rapidly evolving technology landscape, the ability to move decisively is a competitive advantage. We build processes that keep our clients ahead of change.</p>
           </div>
         </div>
         <div class="value-item">
           <div class="value-num">05</div>
           <div>
-            <div class="value-name">Long-Term Partnership</div>
-            <p class="value-desc">We build relationships, not transactions. Our post-deployment support and account management ensure value grows long after the initial project closes.</p>
+            <div class="value-name" data-i18n="values.v5.name">Long-Term Partnership</div>
+            <p class="value-desc" data-i18n="values.v5.desc">We build relationships, not transactions. Our post-deployment support and account management ensure value grows long after the initial project closes.</p>
           </div>
         </div>
       </div>
@@ -382,17 +381,17 @@
   <div class="container">
     <div class="contact-layout">
       <div class="contact-info fade-up">
-        <div class="section-label">Get in Touch</div>
-        <h2 class="section-title">Let's build something together</h2>
-        <p class="section-subtitle">Whether you need a technology assessment, a specific procurement, or a long-term managed services partnership — we're ready to talk.</p>
+        <div class="section-label" data-i18n="contact.label">Get in Touch</div>
+        <h2 class="section-title" data-i18n="contact.title">Let's build something together</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Whether you need a technology assessment, a specific procurement, or a long-term managed services partnership — we're ready to talk.</p>
         <div class="contact-channels">
-          <a href="mailto:hello@aybex.sa" class="contact-channel">
+          <a href="mailto:hello@aybex.com" class="contact-channel">
             <div class="channel-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
             <div>
-              <div class="channel-label">Email</div>
-              <div class="channel-value">hello@aybex.sa</div>
+              <div class="channel-label" data-i18n="contact.email">Email</div>
+              <div class="channel-value">hello@aybex.com</div>
             </div>
           </a>
           <a href="tel:+966500000000" class="contact-channel">
@@ -400,7 +399,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 4.18 2 2 0 0 1 5.09 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9.91 9a16 16 0 0 0 6 6l.38-.38a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div>
-              <div class="channel-label">Phone</div>
+              <div class="channel-label" data-i18n="contact.phone">Phone</div>
               <div class="channel-value">+966 50 000 0000</div>
             </div>
           </a>
@@ -409,8 +408,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <div class="channel-label">Location</div>
-              <div class="channel-value">Jeddah, Saudi Arabia</div>
+              <div class="channel-label" data-i18n="contact.location">Location</div>
+              <div class="channel-value" data-i18n="contact.locationValue">Jeddah, Saudi Arabia</div>
             </div>
           </div>
         </div>
@@ -418,36 +417,36 @@
       <div class="contact-form fade-up">
         <div class="form-grid">
           <div class="form-group">
-            <label for="fname">First Name</label>
+            <label for="fname" data-i18n="contact.form.firstName">First Name</label>
             <input type="text" id="fname" placeholder="Ahmad" />
           </div>
           <div class="form-group">
-            <label for="lname">Last Name</label>
+            <label for="lname" data-i18n="contact.form.lastName">Last Name</label>
             <input type="text" id="lname" placeholder="Al-Rashidi" />
           </div>
           <div class="form-group full">
-            <label for="email">Work Email</label>
+            <label for="email" data-i18n="contact.form.email">Work Email</label>
             <input type="email" id="email" placeholder="ahmad@company.com" />
           </div>
           <div class="form-group full">
-            <label for="service">Service Interest</label>
+            <label for="service" data-i18n="contact.form.serviceLabel">Service Interest</label>
             <select id="service">
-              <option value="" disabled selected>Select a service…</option>
-              <option>IT Infrastructure</option>
-              <option>Cloud Solutions</option>
-              <option>Cybersecurity</option>
-              <option>Vendor Procurement</option>
-              <option>Managed Services</option>
-              <option>IT Consulting</option>
-              <option>Other</option>
+              <option value="" disabled selected data-i18n="contact.form.selectService">Select a service…</option>
+              <option data-i18n="services.s1.name">IT Infrastructure</option>
+              <option data-i18n="services.s2.name">Cloud Solutions</option>
+              <option data-i18n="services.s3.name">Cybersecurity</option>
+              <option data-i18n="contact.form.vendorProcurement">Vendor Procurement</option>
+              <option data-i18n="services.s5.name">Managed Services</option>
+              <option data-i18n="services.s6.name">IT Consulting</option>
+              <option data-i18n="contact.form.other">Other</option>
             </select>
           </div>
           <div class="form-group full">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Tell us about your project or requirements…"></textarea>
+            <label for="message" data-i18n="contact.form.message">Message</label>
+            <textarea id="message" placeholder="Tell us about your project or requirements…" data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
           </div>
         </div>
-        <button class="form-submit" onclick="handleSubmit()">Send Message</button>
+        <button class="form-submit" onclick="handleSubmit()" data-i18n="contact.form.submit">Send Message</button>
       </div>
     </div>
   </div>
@@ -458,11 +457,11 @@
   <div class="footer-inner">
     <div class="footer-logo">AYBEX Digital Solutions</div>
     <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#partnerships">Partners</a>
-      <a href="#contact">Contact</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#partnerships" data-i18n="nav.partners">Partners</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
-    <div class="footer-copy">© 2026 AYBEX Digital Solutions. All rights reserved.</div>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 AYBEX Digital Solutions. All rights reserved.</div>
   </div>
 </footer>
 
@@ -495,7 +494,269 @@
     btn.style.background = '#0a7c3c';
     btn.disabled = true;
   }
-</script>
 
+  // ── JS-driven sliders: auto-scroll + drag/swipe ──
+  function initSlider(wrapperEl, trackEl, speedPxPerSec, direction) {
+    const setWidth = trackEl.scrollWidth / 3; // width of one of the 3 cloned sets
+
+    // Disable the CSS keyframe animation; we drive position manually
+    trackEl.style.animation = 'none';
+
+    let offset = direction === 'right' ? -setWidth : 0;
+    let isDown = false;
+    let startX = 0;
+    let startOffset = 0;
+    let lastTime = null;
+
+    function apply() {
+      // Keep offset within [-2*setWidth, 0] so it never visually jumps
+      while (offset <= -2 * setWidth) offset += setWidth;
+      while (offset > 0) offset -= setWidth;
+      trackEl.style.transform = `translateX(${offset}px)`;
+    }
+
+    function tick(now) {
+      if (lastTime === null) lastTime = now;
+      const dt = (now - lastTime) / 1000;
+      lastTime = now;
+
+      if (!isDown) {
+        const dir = direction === 'right' ? 1 : -1;
+        offset += dir * speedPxPerSec * dt;
+      }
+      apply();
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    function pointerDown(x) {
+      isDown = true;
+      startX = x;
+      startOffset = offset;
+      wrapperEl.style.cursor = 'grabbing';
+    }
+    function pointerMove(x) {
+      if (!isDown) return;
+      offset = startOffset + (x - startX);
+    }
+    function pointerUp() {
+      if (!isDown) return;
+      isDown = false;
+      wrapperEl.style.cursor = 'grab';
+      lastTime = null;
+    }
+
+    wrapperEl.addEventListener('mousedown', e => { pointerDown(e.pageX); e.preventDefault(); });
+    window.addEventListener('mousemove', e => pointerMove(e.pageX));
+    window.addEventListener('mouseup', pointerUp);
+
+    wrapperEl.addEventListener('touchstart', e => pointerDown(e.touches[0].pageX), { passive: true });
+    wrapperEl.addEventListener('touchmove', e => pointerMove(e.touches[0].pageX), { passive: true });
+    wrapperEl.addEventListener('touchend', pointerUp);
+  }
+
+  document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
+    const track = wrapper.querySelector('.slider-track');
+    if (!track) return;
+    const direction = track.classList.contains('right') ? 'right' : 'left';
+    const speed = direction === 'right' ? 60 : 70; // px/sec
+    initSlider(wrapper, track, speed, direction);
+  });
+
+  document.querySelectorAll('.clients-slider-wrapper').forEach(wrapper => {
+    const track = wrapper.querySelector('.clients-track');
+    if (!track) return;
+    initSlider(wrapper, track, 55, 'left');
+  });
+
+  // ── Language toggle (English / Arabic) ──
+  const translations = {
+    en: {
+      "years": "yr",
+      "nav.services": "Services",
+      "nav.partners": "Partners",
+      "nav.clients": "Clients",
+      "nav.values": "Values",
+      "nav.contact": "Contact",
+      "nav.getInTouch": "Get in Touch",
+      "hero.badge": "IT Solutions & Technology Partner · Saudi Arabia",
+      "hero.title": "Powering<br><span class=\"accent-word\">Digital</span><br><span class=\"thin-word\">Infrastructure</span>",
+      "hero.body": "AYBEX Digital Solutions delivers enterprise-grade IT, cloud, and vendor reseller services that give businesses in the region a decisive technological edge.",
+      "hero.ctaPrimary": "Start a Project",
+      "hero.ctaGhost": "Explore Services →",
+      "hero.stat1": "Commitment to Quality and Transparency",
+      "hero.stat2": "Global Technology Partners",
+      "hero.stat3": "Regional Industry Experience",
+      "hero.stat4": "Client Satisfaction Rate",
+      "services.label": "What We Do",
+      "services.title": "End-to-end technology services",
+      "services.subtitle": "From infrastructure consulting to enterprise software procurement, we handle the full technology lifecycle so your team can focus on what matters.",
+      "services.s1.name": "IT Infrastructure",
+      "services.s1.desc": "Design, deploy, and maintain resilient on-premise and hybrid infrastructure tailored to enterprise scale and regional compliance requirements.",
+      "services.s2.name": "Cloud Solutions",
+      "services.s2.desc": "Seamless migration, optimization, and management across AWS, Azure, and Google Cloud — built for performance and cost efficiency in the Gulf.",
+      "services.s3.name": "Cybersecurity",
+      "services.s3.desc": "Comprehensive threat assessment, endpoint protection, and compliance-driven security frameworks to safeguard your most critical assets.",
+      "services.s4.name": "Vendor Reseller",
+      "services.s4.desc": "Authorized reseller of leading global technology brands — hardware, software, and licensing — with dedicated procurement support and competitive pricing.",
+      "services.s5.name": "Managed Services",
+      "services.s5.desc": "Proactive 24/7 monitoring, helpdesk, and system management — so operational downtime never becomes a business problem.",
+      "services.s6.name": "IT Consulting",
+      "services.s6.desc": "Strategic advisory from certified architects who align your technology investments with Vision 2030 objectives and long-term growth roadmaps.",
+      "partners.label": "Technology Partners",
+      "partners.title": "Built on trusted global alliances",
+      "partners.subtitle": "We are an authorized partner of the world's leading technology vendors, giving our clients direct access to cutting-edge solutions backed by official support.",
+      "clients.label": "Our Clients",
+      "clients.title": "Trusted by organizations across the Kingdom",
+      "clients.subtitle": "From government entities to high-growth enterprises, AYBEX Digital Solutions has earned the confidence of industry leaders across Saudi Arabia and the wider Gulf region.",
+      "clients.quote": "\"AYBEX transformed our entire IT infrastructure in under six months. Their team understood our regulatory requirements and delivered a solution that exceeded expectations — on time and within budget.\"",
+      "clients.cite": "— Head of IT Operations, Leading Saudi Bank",
+      "values.label": "Values & Vision",
+      "values.title": "Principles that guide every engagement",
+      "values.subtitle": "We believe technology only creates value when it is delivered with integrity, depth of expertise, and a genuine commitment to the client's success.",
+      "values.visionLabel": "Our Vision",
+      "values.visionText": "To be the <strong>most trusted digital infrastructure partner</strong> in the Arabian Gulf — enabling organizations to lead confidently in a technology-driven future aligned with <strong>Vision 2030</strong>.",
+      "values.v1.name": "Client-First Mindset",
+      "values.v1.desc": "Every decision starts with understanding what success looks like for the client. We measure our performance by the outcomes we deliver, not the products we sell.",
+      "values.v2.name": "Technical Excellence",
+      "values.v2.desc": "Our team holds certifications across the full vendor ecosystem. We invest continuously in upskilling so our clients always have access to the most current expertise.",
+      "values.v3.name": "Integrity & Transparency",
+      "values.v3.desc": "We give honest recommendations, clear pricing, and direct communication — even when the honest answer is harder to deliver.",
+      "values.v4.name": "Agility & Speed",
+      "values.v4.desc": "In a rapidly evolving technology landscape, the ability to move decisively is a competitive advantage. We build processes that keep our clients ahead of change.",
+      "values.v5.name": "Long-Term Partnership",
+      "values.v5.desc": "We build relationships, not transactions. Our post-deployment support and account management ensure value grows long after the initial project closes.",
+      "contact.label": "Get in Touch",
+      "contact.title": "Let's build something together",
+      "contact.subtitle": "Whether you need a technology assessment, a specific procurement, or a long-term managed services partnership — we're ready to talk.",
+      "contact.email": "Email",
+      "contact.phone": "Phone",
+      "contact.location": "Location",
+      "contact.locationValue": "Jeddah, Saudi Arabia",
+      "contact.form.firstName": "First Name",
+      "contact.form.lastName": "Last Name",
+      "contact.form.email": "Work Email",
+      "contact.form.serviceLabel": "Service Interest",
+      "contact.form.selectService": "Select a service…",
+      "contact.form.vendorProcurement": "Vendor Procurement",
+      "contact.form.other": "Other",
+      "contact.form.message": "Message",
+      "contact.form.messagePlaceholder": "Tell us about your project or requirements…",
+      "contact.form.submit": "Send Message",
+      "footer.copy": "© 2026 AYBEX Digital Solutions. All rights reserved."
+    },
+    ar: {
+      "years": "+",
+      "nav.services": "الخدمات",
+      "nav.partners": "الشركاء",
+      "nav.clients": "العملاء",
+      "nav.values": "القيم",
+      "nav.contact": "تواصل معنا",
+      "nav.getInTouch": "تواصل معنا",
+      "hero.badge": "حلول تقنية المعلومات وشريك تكنولوجي · المملكة العربية السعودية",
+      "hero.title": "نُشغّل<br><span class=\"accent-word\">البنية التحتية</span><br><span class=\"thin-word\">الرقمية</span>",
+      "hero.body": "تقدم AYBEX للحلول الرقمية خدمات تقنية معلومات وحوسبة سحابية وإعادة بيع تقنية على مستوى المؤسسات، لتمنح الشركات في المنطقة ميزة تقنية حاسمة.",
+      "hero.ctaPrimary": "ابدأ مشروعًا",
+      "hero.ctaGhost": "← استكشف الخدمات",
+      "hero.stat1": "التزام بالجودة والشفافية",
+      "hero.stat2": "شركاء تقنيين عالميين",
+      "hero.stat3": "سنوات خبرة في السوق المحلي",
+      "hero.stat4": "نسبة رضا العملاء",
+      "services.label": "ماذا نقدم",
+      "services.title": "خدمات تقنية شاملة من البداية للنهاية",
+      "services.subtitle": "من الاستشارات الخاصة بالبنية التحتية إلى توريد البرمجيات للمؤسسات، نتولى دورة حياة التقنية كاملة ليتفرغ فريقك لما يهم فعلاً.",
+      "services.s1.name": "البنية التحتية لتقنية المعلومات",
+      "services.s1.desc": "تصميم ونشر وصيانة بنية تحتية مرنة محلية وهجينة، مصممة خصيصًا لتلبية متطلبات المؤسسات الكبرى ومتطلبات الامتثال المحلية.",
+      "services.s2.name": "الحلول السحابية",
+      "services.s2.desc": "ترحيل وتحسين وإدارة سلسة عبر AWS و Azure و Google Cloud — مصممة لتحقيق الأداء والكفاءة في التكلفة بالخليج.",
+      "services.s3.name": "الأمن السيبراني",
+      "services.s3.desc": "تقييم شامل للتهديدات، وحماية لنقاط النهاية، وأطر أمنية متوافقة مع المعايير لحماية أصولكم الأكثر أهمية.",
+      "services.s4.name": "إعادة بيع المنتجات التقنية",
+      "services.s4.desc": "موزع معتمد لأبرز العلامات التقنية العالمية — أجهزة وبرمجيات وترخيص — مع دعم مخصص للمشتريات وأسعار تنافسية.",
+      "services.s5.name": "الخدمات المُدارة",
+      "services.s5.desc": "مراقبة استباقية على مدار الساعة، ودعم فني، وإدارة للأنظمة — حتى لا يتحول التوقف التشغيلي إلى مشكلة في العمل.",
+      "services.s6.name": "استشارات تقنية المعلومات",
+      "services.s6.desc": "استشارات استراتيجية من مهندسين معتمدين، لمواءمة استثماراتكم التقنية مع أهداف رؤية 2030 وخطط النمو طويلة المدى.",
+      "partners.label": "الشركاء التقنيون",
+      "partners.title": "مبنيون على شراكات عالمية موثوقة",
+      "partners.subtitle": "نحن موزع معتمد لأبرز مزودي التقنية العالميين، مما يمنح عملاءنا وصولًا مباشرًا لأحدث الحلول مع دعم رسمي.",
+      "clients.label": "عملاؤنا",
+      "clients.title": "موثوقون من قِبل مؤسسات في أنحاء المملكة",
+      "clients.subtitle": "من الجهات الحكومية إلى الشركات سريعة النمو، نالت AYBEX للحلول الرقمية ثقة كبرى المؤسسات في السعودية ومنطقة الخليج.",
+      "clients.quote": "«قامت AYBEX بتطوير بنيتنا التحتية لتقنية المعلومات بالكامل في أقل من ستة أشهر. فهم فريقهم متطلباتنا التنظيمية وقدّموا حلاً تجاوز التوقعات — في الوقت المحدد وضمن الميزانية.»",
+      "clients.cite": "— رئيس عمليات تقنية المعلومات، مستشفى سعودية رائدة",
+      "values.label": "القيم والرؤية",
+      "values.title": "مبادئ توجّه كل تعاون معنا",
+      "values.subtitle": "نؤمن بأن التقنية لا تخلق قيمة إلا عندما تُقدَّم بنزاهة وعمق في الخبرة وحرص حقيقي على نجاح العميل.",
+      "values.visionLabel": "رؤيتنا",
+      "values.visionText": "أن نكون <strong>الشريك الأكثر ثقة في البنية التحتية الرقمية</strong> في منطقة الخليج العربي — مما يمكّن المؤسسات من قيادة مستقبل تقني بثقة يتماشى مع <strong>رؤية 2030</strong>.",
+      "values.v1.name": "العميل أولاً",
+      "values.v1.desc": "كل قرار يبدأ بفهم ما يعنيه النجاح للعميل. نقيس أداءنا بالنتائج التي نحققها، لا بالمنتجات التي نبيعها.",
+      "values.v2.name": "التميز التقني",
+      "values.v2.desc": "يحمل فريقنا شهادات معتمدة عبر منظومة كاملة من المزودين. نستثمر باستمرار في تطوير المهارات لضمان وصول عملائنا لأحدث الخبرات.",
+      "values.v3.name": "النزاهة والشفافية",
+      "values.v3.desc": "نقدّم توصيات صادقة وتسعيرًا واضحًا وتواصلًا مباشرًا — حتى عندما تكون الإجابة الصادقة هي الأصعب.",
+      "values.v4.name": "المرونة والسرعة",
+      "values.v4.desc": "في مشهد تقني سريع التطور، تُعد القدرة على التحرك بحزم ميزة تنافسية. نبني عمليات تجعل عملاءنا في الطليعة دائمًا.",
+      "values.v5.name": "شراكة طويلة الأمد",
+      "values.v5.desc": "نبني علاقات لا صفقات. دعمنا بعد التنفيذ وإدارة الحسابات يضمنان استمرار القيمة لفترة طويلة بعد إغلاق المشروع الأول.",
+      "contact.label": "تواصل معنا",
+      "contact.title": "لنبني شيئًا معًا",
+      "contact.subtitle": "سواء كنت بحاجة لتقييم تقني أو عملية توريد محددة أو شراكة خدمات مُدارة طويلة الأمد — نحن جاهزون للحديث.",
+      "contact.email": "البريد الإلكتروني",
+      "contact.phone": "الهاتف",
+      "contact.location": "الموقع",
+      "contact.locationValue": "جدة، المملكة العربية السعودية",
+      "contact.form.firstName": "الاسم الأول",
+      "contact.form.lastName": "اسم العائلة",
+      "contact.form.email": "البريد الإلكتروني للعمل",
+      "contact.form.serviceLabel": "الخدمة المطلوبة",
+      "contact.form.selectService": "اختر خدمة…",
+      "contact.form.vendorProcurement": "توريد منتجات تقنية",
+      "contact.form.other": "أخرى",
+      "contact.form.message": "الرسالة",
+      "contact.form.messagePlaceholder": "أخبرنا عن مشروعك أو متطلباتك…",
+      "contact.form.submit": "إرسال الرسالة",
+      "footer.copy": "© 2026 AYBEX للحلول الرقمية. جميع الحقوق محفوظة."
+    }
+  };
+
+  let currentLang = 'en';
+
+  function applyTranslations(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key] !== undefined) {
+        el.textContent = translations[lang][key];
+      }
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (translations[lang][key] !== undefined) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (translations[lang][key] !== undefined) {
+        el.setAttribute('placeholder', translations[lang][key]);
+      }
+    });
+  }
+
+  function toggleLang() {
+    currentLang = currentLang === 'en' ? 'ar' : 'en';
+    const isRtl = currentLang === 'ar';
+
+    document.documentElement.setAttribute('lang', currentLang);
+    document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+
+    applyTranslations(currentLang);
+
+    // Button shows the language you'd switch TO
+    document.getElementById('langToggle').textContent = isRtl ? 'EN' : 'AR';
+  }
+
+</script>
 </body>
 </html>
