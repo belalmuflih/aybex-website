@@ -714,8 +714,8 @@ h1.hero-title .thin-word {
   transform: translateY(-3px);
 }
 .client-logo {
-  /* width: 52px;
-  height: 52px; */
+  min-width: 120px;
+  max-width: 150px;
   border-radius: var(--radius-sm);
   object-fit: contain;
   filter: brightness(0) invert(1);
